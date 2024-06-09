@@ -1,0 +1,10 @@
+import java.util.*;
+class MaxMinElement{
+   public static void main(String[] args){
+       int a[] = {7,2,3,8,5,4,6,9,76,45,89};
+       
+       Arrays.sort(a);
+       
+       System.out.println("Min Element: " + a[0] + " \nMax Element: "+a[a.length-1]);
+   }
+}
