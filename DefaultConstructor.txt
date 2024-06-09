@@ -1,0 +1,26 @@
+//Default constructor
+class Bike{
+    public Bike(){
+        System.out.println("This is a bike");
+    }
+    public static void main (String[] args) {
+        Bike bike = new Bike();
+    }
+}
+
+
+//default values
+class Student{
+    int id;
+    String name;
+    void display(){
+        System.out.println(id + " " + name);
+    }
+    
+    public static void main (String[] args) {
+        Student s1 = new Student();
+        Student s2 = new Student();
+        s1.display();
+        s2.display();
+    }
+}
