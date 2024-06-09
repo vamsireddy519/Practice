@@ -1,0 +1,19 @@
+class Calculator{
+    public int add(int a, int b){
+        return a+b;
+    }
+    public int add(int a,int b, int c){
+        return a+b+c;
+    }
+}
+
+public class CompileTimePolymorphism{
+    public static void main(String[] args){
+        Calculator cal = new Calculator();
+        int result1 = cal.add(4,6);
+        int result2 = cal.add(6,7,8);
+        
+        System.out.println("Result1 : "+result1);
+        System.out.println("Result2 : " + result2);
+    }
+}
