@@ -26,3 +26,59 @@ public class Book {
         return "'" + title + "' by " + author + " (ISBN: " + isbn + ")";
     }
 }
+import java.util.ArrayList;
+import java.util.List;
+
+public class BookCollection {
+    private List<Book> books;
+
+    public BookCollection() {
+        this.books = new ArrayList<>();
+    }
+
+    public void addBook(Book book) {
+        if (!books.contains(book)) {
+            books.add(book);
+            System.out.println("Book added: " + book);
+        } else {
+            System.out.println("Book already in collection: " + book);
+        }
+    }
+
+    public void removeBook(String isbn) {
+        for (Book book : books) {
+            if (book.getIsbn().equals(isbn)) {
+                books.remove(book);
+                System.out.println("Book removed: " + book);
+                return;
+            }
+        }
+        System.out.println("No book found with ISBN: " + isbn);
+    }
+
+    public void listBooks() {
+        if (books.isEmpty()) {
+            System.out.println("No books in collection.");
+        } else {
+            for (Book book : books) {
+                System.out.println(book);
+            }
+        }
+    }
+
+    public static void main(String[] args) {
+        BookCollection collection = new BookCollection();
+
+        Book book1 = new Book("The Great Gatsby", "F. Scott Fitzgerald", "9780743273565");
+        Book book2 = new Book("1984", "George Orwell", "9780451524935");
+
+        collection.addBook(book1);
+        collection.addBook(book2);
+
+        collection.listBooks();
+
+        collection.removeBook("9780451524935");
+
+        collection.listBooks();
+    }
+}
