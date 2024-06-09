@@ -1,0 +1,26 @@
+class Account{
+    private long accNo;
+    private String name;
+    
+    public long getaccNo(){
+        return accNo;
+    }
+    public void setaccNo(long accNo){
+         this.accNo = accNo;
+    }
+    public String getname(){
+        return name;
+    }
+    public void setname(String name){
+        this.name =name ;
+    }
+}
+
+public class Main{
+    public static void main(String[] args){
+        Account acc = new Account();
+        acc.setaccNo(345678L);
+        acc.setname("lokey") ;
+        System.out.println(acc.getaccNo()+ " " + acc.getname());
+    }
+}
