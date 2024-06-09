@@ -1,4 +1,4 @@
-[3:50 PM, 5/31/2024] Ramesh@449: class Employee {
+ class Employee {
     private String name;
     private String address;
     private double salary;
