@@ -1,10 +1,10 @@
 //Default constructor
-class Bike{
-    public Bike(){
-        System.out.println("This is a bike");
+class Car{
+    public Car(){
+        System.out.println("This is a Car");
     }
     public static void main (String[] args) {
-        Bike bike = new Bike();
+        Car car = new Car();
     }
 }
 
