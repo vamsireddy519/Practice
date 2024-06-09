@@ -1,0 +1,28 @@
+class Student{
+    int id;
+    String name;
+    int age;
+    
+    Student(int i, String n, int a){
+        id=i;
+        name = n;
+        age=a;
+    }
+    Student(Student s1){
+        id=s1.id;
+        name=s1.name;
+        age = s1.age;
+    }
+    
+    void display(){
+        System.out.println(id + " " + name + " " + age);
+    }
+    
+    public static void main (String[] args) {
+        Student stu = new Student(1, "Keerthi", 17);
+        Student stu1 =  new Student(stu);
+        stu.display();
+        stu1.display();
+    }
+    
+}	
