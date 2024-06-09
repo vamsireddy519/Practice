@@ -1,0 +1,39 @@
+class Bank{
+    int getRateOfIntrest(){
+        return 0;
+    }
+}
+
+class SBI extends Bank{
+    int getRateOfIntrest(){
+        return 9;
+    }
+}
+
+class Axis extends Bank{
+    int getRateOfIntrest(){
+        return 8;
+    }
+}
+
+class Indus extends Bank{
+    int getRateOfIntrest(){
+        return 7;
+    }
+}
+
+class MethodOverriding{
+    public static void main (String[] args) {
+        SBI s = new SBI();
+        Axis a = new Axis();
+        Indus i = new Indus();
+        System.out.println("SBI RateOf interst: " + s.getRateOfIntrest());
+        System.out.println("Axis RateOf interst: " + a.getRateOfIntrest());
+        System.out.println("Indus RateOf interst: " + i.getRateOfIntrest());
+        
+        
+        
+        
+        
+    }
+}
