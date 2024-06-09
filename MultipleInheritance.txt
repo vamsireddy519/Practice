@@ -1,0 +1,36 @@
+interface Drawable{
+    void draw();
+}
+interface Colorable{
+    void setColor(String color);
+}
+
+class Shape implements Drawable,Colorable{
+    private String color;
+    @Override
+    public void draw(){
+        System.out.println("Drawing a Shape");
+    }
+    @Override 
+    public void setColor(String color){
+        this.color = color;
+    }
+    public void displayColor(){
+        System.out.println("color : " +color);
+    }
+}
+public class MultipleInheritance{
+    public static void main(String[] args){
+        Shape shape = new Shape();
+        shape.draw();
+        shape.setColor("red");
+        shape.displayColor();
+    }
+}
+
+
+
+
+
+
+
